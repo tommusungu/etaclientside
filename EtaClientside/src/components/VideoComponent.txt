@@ -1,0 +1,68 @@
+import React, { useState } from 'react';
+import 'yet-another-react-lightbox/styles.css';
+import Video from './../assets/K24_Interview_Video.mp4';
+import { FaPlay, FaTimes } from 'react-icons/fa';
+import './Video.css';
+
+const VideoComponent = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
+  const openVideo = () => {
+    setIsVideoOpen(true);
+  };
+
+  const closeVideo = () => {
+    setIsVideoOpen(false);
+  };
+
+  return (
+    <div className="w-full text-center">
+      {!isVideoOpen && (
+        <div className="relative w-full h-[80vh] video-thumbnail">
+          <div className="absolute inset-0 flex flex-col gap-2 items-center justify-center bg-black bg-opacity-60 text-gray-100 p-4">
+            <h3 className="text-4xl font-bold mb-2">Edward W. Ndari - CEO of ETA Awards Kenya</h3>
+            <p className="text-lg mb-4">
+            
+Insightful interview: Edward W. Ndari discusses the vision and impact of the ETA Awards on Kenyan entertainment and beyond. 
+<br/>
+The conversation highlights how the awards are elevating national and international recognition for Kenyan talent on K24.
+            </p>
+
+            <button onClick={openVideo} className='video'>
+              <div className="floating_btn">
+                <div className="flex items-center justify-center">
+                  <div className="contact_icon flex justify-center items-center text-gray-600 font-semibold gap-1 px-4 py-2">
+                    <p className=' '>Play </p>
+                    <p className=' '>Video </p>
+
+                    <FaPlay className="fa fa-video my-float ml-2" />
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      )}
+
+      {isVideoOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+          <div className="relative w-full h-auto">
+            <video className="w-full h-auto" controls autoPlay>
+              <source src={Video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <button
+              onClick={closeVideo}
+              className="absolute top-2 right-2 z-50 bg-yellow-500 text-gray-100 p-2 rounded-full hover:bg-red-700 transition duration-300"
+              style={{ zIndex: 1000 }}
+            >
+              <FaTimes className=''/>
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default VideoComponent;

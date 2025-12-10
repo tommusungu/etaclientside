@@ -1,0 +1,1 @@
+import{j as e}from"./index-C3g9-Pho.js";const x=({title:s})=>e.jsx("div",{className:"py-4 flex flex-col gap-2",children:e.jsxs("div",{className:"flex flex-col justify-center items-center gap-x-2",children:[e.jsx("h1",{className:"text-center   text-3xl sm:5xl  font-extrabold  text-gray-300",children:s}),e.jsx("div",{className:"h-[3px] w-2/3 bg-yellow-500"})]})});export{x as H};

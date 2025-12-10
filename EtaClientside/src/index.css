@@ -1,0 +1,401 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit';
+  transition: all 0.2s ease-in-out;
+}
+/* src/fonts.css */
+
+.choose::before {
+  content: "➢"; /* Insert tick mark before each list item */
+  margin-right: 0.5rem; /* Add some space between the tick mark and the list item text */
+  
+  color: #16a34a;
+}
+/* Add this CSS to your existing styles */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out;
+}
+
+.Oswald {
+  font-family: 'Oswald', sans-serif;
+  -webkit-text-stroke: 1px white; /* Outline color */
+  color: transparent; /* Hide the inner text */
+}
+.fade-in-out {
+  opacity: 0;
+}
+
+.fade-in-out.aos-animate {
+  opacity: 1;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.navbar-a {
+    text-decoration: none; /* Remove default underline */
+    position: relative; /* Required for positioning the line */
+    
+    transition: color 0.3s; /* Smooth color transition */
+  }
+
+  /* Create a pseudo-element for the line */
+ .navbar-a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initially, the line has no width */
+    height: 2px; /* Height and color of the line */
+    background-color: #16a34a; /* Line color */
+    transition: width 0.3s; /* Smooth width transition */
+  }
+
+  /* Hover effect to reveal the line from the left */
+ .navbar-a:hover::before {
+    width: 100%; /* Expand the line to 100% width on hover */
+  }
+
+  /* Change text color on hover */
+  .navbar-a:hover {
+    color: #16a34a; /* Change link color on hover */
+    cursor: pointer;
+  }
+
+
+
+  .navbar-b {
+    text-decoration: none; /* Remove default underline */
+    position: relative; /* Required for positioning the line */
+
+    transition: color 0.3s; /* Smooth color transition */
+  }
+
+  /* Create a pseudo-element for the line */
+ .navbar-b::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initially, the line has no width */
+    height: 2px; /* Height and color of the line */
+    background-color: #ccc; /* Line color */
+    transition: width 0.3s; /* Smooth width transition */
+  }
+
+  /* Hover effect to reveal the line from the left */
+ .navbar-b:hover::before {
+    width: 100%; /* Expand the line to 100% width on hover */
+  }
+
+  /* Change text color on hover */
+  .navbar-b:hover {
+    color: #ccc; /* Change link color on hover */
+    cursor: pointer;
+  }
+/* Add this to your existing styles or create a new CSS file */
+
+.input-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Initially, the line has no width */
+  height: 2px; /* Height and color of the line */
+  background-color: #16a34a; /* Line color */
+  transition: width 0.3s ease; /* Smooth width transition with ease timing function */
+}
+
+/* Hover effect to reveal the line from the left and change color */
+input:hover + .input-line {
+  width: 100%; /* Expand the line to 100% width on hover */
+}
+
+.textarea-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Initially, the line has no width */
+  height: 2px; /* Height and color of the line */
+  background-color: #16a34a; /* Line color */
+  transition: width 0.3s ease; /* Smooth width transition with ease timing function */
+}
+
+/* Hover effect to reveal the line from the left and change color */
+textarea:hover + .textarea-line {
+  width: 100%; /* Expand the line to 100% width on hover */
+}
+.footer-bg-sm {
+  --mask:
+    radial-gradient(30.15px at 50% 33.00px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(30.15px at 50% -3px,#0000 99%,#000 101%) 50% 30px/120px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+.footer-bg {
+ 
+    --mask:
+      radial-gradient(223.61px at 50% 300.00px,#000 99%,#0000 101%) calc(50% - 200px) 0/400px 100%,
+      radial-gradient(223.61px at 50% -200px,#0000 99%,#000 101%) 50% 100px/400px 100% repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+  }
+  .oval-wrap {
+    position: relative;
+    display: inline-block;
+  }
+
+  .oval-wrap::before,
+  .oval-wrap::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%; /* Creates the oval shape */
+    width: 30px; /* Adjust the width of the oval as needed */
+    height: 20px; /* Adjust the height of the oval as needed */
+    background-color: #16a34a; /* Change the background color as needed */
+    
+    z-index: -1;
+  }
+
+  .oval-wrap::before {
+    left: -10px; /* Adjust the left position to control the oval's position */
+    top: 0;
+  }
+
+  .oval-wrap::after {
+    right: -10px; /* Adjust the right position to control the oval's position */
+    bottom: 0;
+  }
+  /* Hero.css */
+.hero-image-container {
+    display: flex;
+    justify-content: flex-end; /* Push the image to the right on large devices */
+    align-items: center; /* Vertically center the image */
+  }
+  .about-image-container {
+    display: flex;
+    justify-content: flex-end; /* Push the image to the right on large devices */
+    align-items: center; /* Vertically center the image */
+  }
+  .hero-image {
+    max-width: 100%; /* Make the image responsive */
+    height: auto;
+  }
+
+
+  .magicpattern { 
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+    /* background-image: url("./assets/heroSvg.svg"); */
+  }
+  .about-magicpattern { 
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+    /* background-image: url("./assets/heroSvg.svg"); */
+  }
+  
+  
+  /* Media query for small devices */
+  @media (max-width: 640px) {
+    .hero-image-container {
+      justify-content: center; /* Center the image on small devices */
+    }
+  }
+  
+
+  /* Add this to your existing styles or create a new CSS file */
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-50px); /* Adjust the initial horizontal position as needed */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* custom loader */
+.custom-loader {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border-radius: 50%;
+  -webkit-mask:radial-gradient(farthest-side,#0000 40%,#000 41%);
+  background:
+    linear-gradient(0deg ,#F4000080 50%,#F40000FF 0) center/4px 100%,
+    linear-gradient(90deg,#F4000040 50%,#F40000BF 0) center/100% 4px;
+  background-repeat: no-repeat;
+  animation: s3 1s infinite steps(12);
+}
+.custom-loader::before,
+.custom-loader::after {
+   content:"";
+   grid-area: 1/1;
+   border-radius: 50%;
+   background:inherit;
+   opacity: 0.915;
+   transform: rotate(30deg);
+}
+.custom-loader::after {
+   opacity: 0.83;
+   transform: rotate(60deg);
+}
+
+@keyframes s3 {
+  100% {transform: rotate(1turn)}
+}
+/* divider */
+
+.custom-shape-divider-bottom-1715666260 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1715666260 svg {
+  position: relative;
+  display: block;
+  width: calc(278% + 1.3px);
+  height: 271px;
+}
+
+.custom-shape-divider-bottom-1715666260 .shape-fill {
+  fill: rgb(229 231 235 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
+}
+
+/* divider2 */
+
+.custom-shape-divider-bottom-1715672785 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1715672785 svg {
+  position: relative;
+  display: block;
+  width: calc(137% + 1.3px);
+  height: 61px;
+}
+
+.custom-shape-divider-bottom-1715672785 .shape-fill {
+  fill: rgb(243 244 246 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
+
+}
+
+/* backgrouund gradient */
+
+.background-gradient {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(334deg,  rgb(229 231 235), #924bf6, #fac44e);
+	background-size: 180% 180%;
+	animation: gradient-animation 6s ease infinite;
+}
+
+@keyframes gradient-animation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+/* hero slide */
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideInFromBottom 1s ease-out;
+}
+/* background image */
+.custom-image {
+  background-image: url('./assets/approach.jpg');
+  background-size: cover; /* Adjust as needed */
+  background-attachment: fixed;
+  height: 40vh;
+  width: 100%;
+}
+/* .video-thumbnail {
+  background-image: url('./assets/bfde7b44-fa47-4f18-a60d-d9d5b97d590a.jpeg');
+  background-size: cover; 
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+} */
+
+/*gallery*/
+.gallery-item {
+  position: relative;
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.gallery-item .overlay .icon {
+  color: white;
+  font-size: 2rem;
+}
+
+.gallery-item:hover .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+/* navbar fixed */
+.fix-nav {
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+  
+}
+
+.fix-nav.scrolled {
+  margin-top: 5px;
+  transform: translateY(-5px);
+ 
+}

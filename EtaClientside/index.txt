@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/src/assets/ETA-25-logo.png" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>ETA Awards KE – Celebrating Excellence in Entertainment, Leadership & Innovation</title>
+    <meta name="title" content="ETA Awards KE – Celebrating Excellence in Entertainment, Leadership & Innovation">
+    <meta name="description" content="ETA Awards Kenya recognizes outstanding individuals in Entertainment, Business, Governance, and Community Work. Vote now and support your favorite nominee!">
+    <meta name="keywords" content="ETA Awards KE, Kenya Awards, Voting Platform, Entertainment Awards, Nominees, Leadership Recognition, Business Excellence, Community Awards">
+    <meta name="author" content="ETA Awards Kenya">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://etaawards.co.ke/">
+    <meta property="og:title" content="ETA Awards KE – Celebrating Excellence in Kenya">
+    <meta property="og:description" content="Recognizing talent in Entertainment, Leadership, Business and Community Work across Kenya. Vote today!">
+    <meta property="og:image" content="/src/assets/ETA-25-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://etaawards.co.ke/">
+    <meta property="twitter:title" content="ETA Awards KE – Celebrating Excellence in Kenya">
+    <meta property="twitter:description" content="Recognizing talent in Entertainment, Leadership, Business and Community Work across Kenya. Vote today!">
+    <meta property="twitter:image" content="/src/assets/ETA-25-logo.png">
+
+    <!-- Google Tag Manager (Head) -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-W23KL9DN');
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRWC2QCKVN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LRWC2QCKVN');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6062719948168819"
+     crossorigin="anonymous"></script>
+
+
+   
+  </head>
+  <body>
+        <script type="module" src="/src/main.jsx"></script>
+
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W23KL9DN"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+.video a{
+  text-decoration:none;
+}
+
+.video  .floating_btn {
+  
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  z-index: 1000;
+}
+
+@keyframes pulsing {
+  to {
+    box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+  }
+}
+
+.video .contact_icon {
+  background-color: #f3f4f6   ;
+
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translatey(0px);
+  animation: pulse 3.5s infinite;
+  box-shadow: 0 0 0 0 #f3f4f6   ;
+  -webkit-animation: pulsing 3.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulsing 3.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulsing 3.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulsing 3.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  font-weight: normal;
+  font-family: sans-serif;
+  text-decoration: none !important;
+  transition: all 300ms ease-in-out;
+}
+
+
+
+
+/* .video-thumbnail {
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+} */
+
+.video-thumbnails {
+  display: flex;
+  gap: 16px; /* Adjust gap between thumbnails */
+  overflow-x: auto; /* Allows horizontal scrolling */
+}
+.video-thumbnail {
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.floating_btn {
+  background: transparent;
+}
+
+.contact_icon {
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  opacity: 0.8;
+}
